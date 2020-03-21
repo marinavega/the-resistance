@@ -1,16 +1,16 @@
-require 'rails_helper'
-require 'target_selector/attack_modes/closest_first'
+require "rails_helper"
+require "target_selector/attack_modes/furthest_first"
 
 module TargetSelector
   module AttackModes
-    describe ClosestFirst do
+    describe FurthestFirst do
       let(:closest_position) { Radar.new(10, 15, [Target.new('Human', nil)]) }
       let(:furthest_position) { Radar.new(5, 90, [Target.new('HK-Bomber', 80)]) }
 
-      it 'returns the positions sorted by distance (asc)' do
+      it 'returns the positions sorted by distance (desc)' do
         positions = [closest_position, furthest_position]
 
-        expect(ClosestFirst.filter(positions).first).to eql(closest_position)
+        expect(FurthestFirst.filter(positions).first).to eql(furthest_position)
       end
     end
   end
