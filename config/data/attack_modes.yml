@@ -1,0 +1,4 @@
+avoid-crossfire: AvoidCrossfire
+priorize-t-x: PriorizeTX
+closest-first: ClosestFirst
+furthest-first: FurthestFirst
