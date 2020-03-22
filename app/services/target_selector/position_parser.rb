@@ -5,7 +5,7 @@ module TargetSelector
     end
 
     def as_json
-      targets = @position.targets.map(&:type).select {|e| e != 'Human'}.reverse
+      targets = @position.targets.map(&:type).reject {|e| e == 'Human'}
 
       { position: { x: @position.x_coordinate,
                     y: @position.y_coordinate },

@@ -32,7 +32,7 @@ module TargetSelector
         subject = Selector.new(attack_modes, positions)
 
         expect(subject.position).to eql(position: { x: 0, y: 20 },
-                                        targets: %w[HK-Bomber T7-T])
+                                        targets: %w[T7-T HK-Bomber ])
       end
     end
 
@@ -54,7 +54,7 @@ module TargetSelector
         subject = Selector.new(attack_modes, positions)
 
         expect(subject.position).to eql(position: { x: 0, y: 40 },
-                                        targets: %w[T-X T1])
+                                        targets: %w[T1 T-X])
       end
     end
   end
