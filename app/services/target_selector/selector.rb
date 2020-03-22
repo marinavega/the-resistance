@@ -6,7 +6,16 @@ module TargetSelector
     end
 
     def position
-      @positions.last
+      filter_positions
+      PositionParser.new(@positions.first).as_json
+    end
+
+    private
+
+    def filter_positions
+      @attack_modes.each do |attack_mode|
+        @positions = attack_mode.filter(@positions)
+      end
     end
   end
 end
