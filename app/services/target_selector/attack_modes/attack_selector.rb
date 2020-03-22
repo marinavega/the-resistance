@@ -3,7 +3,7 @@ module TargetSelector
     class AttackSelector
       MODULE = 'TargetSelector::AttackModes'
 
-      def selector(attack_mode)
+      def select(attack_mode)
         Object.const_get("#{MODULE}::#{mode_configs[attack_mode]}")
       end
 

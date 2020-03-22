@@ -1239,16 +1239,6 @@
           },
           {
             "position": {
-              "x": 30,
-              "y": 95
-            },
-            "targets": {
-              "type": "mech",
-              "number": 20
-            }
-          },
-          {
-            "position": {
               "x": 1,
               "y": 89
             },
@@ -1938,16 +1928,6 @@
                 "damage": 90
               }
             ]
-          },
-          {
-            "position": {
-              "x": 30,
-              "y": 95
-            },
-            "targets": {
-              "type": "mech",
-              "number": 20
-            }
           },
           {
             "position": {
