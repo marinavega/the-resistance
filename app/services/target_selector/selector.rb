@@ -1,12 +1,12 @@
 module TargetSelector
   class Selector
-    def initialize(attack_modes, radar_positions)
+    def initialize(attack_modes, positions)
       @attack_modes = attack_modes
-      @radar_positions = radar_positions
+      @positions = positions
     end
 
     def position
-      @radar_positions.last
+      @positions.last
     end
   end
 end
