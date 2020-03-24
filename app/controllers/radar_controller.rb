@@ -4,7 +4,7 @@ class RadarController < ApplicationController
       TargetSelector::AttackModes::Selector.new.call(code)
     end
 
-    positions = TargetSelector::RadarFactory.new(params['radar']).positions
+    positions = TargetSelector::PositionsFactory.call(params['radar'])
     selected_position = TargetSelector::Selector.new(attack_modes, positions).position
 
     render json: selected_position
