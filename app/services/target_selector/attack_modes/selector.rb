@@ -1,6 +1,6 @@
 module TargetSelector
   module AttackModes
-    class AttackSelector
+    class Selector
       MODULE = 'TargetSelector::AttackModes'
 
       def select(attack_mode)
