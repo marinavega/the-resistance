@@ -3,7 +3,7 @@ class RadarController < ApplicationController
     payload = JSON.parse(request.raw_post)
 
     attack_modes = payload['attack-mode'].map do |code|
-      TargetSelector::AttackModes::Selector.new.select(code)
+      TargetSelector::AttackModes::Selector.new.call(code)
     end
 
     positions = TargetSelector::RadarFactory.new(payload['radar']).positions

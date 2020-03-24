@@ -7,7 +7,7 @@ module TargetSelector
     describe Selector do
       it 'filters out any radar position containing human targets' do
         subject = Selector.new
-        expect(subject.select('avoid-crossfire')).to eql(AvoidCrossfire)
+        expect(subject.call('avoid-crossfire')).to eql(AvoidCrossfire)
       end
     end
   end
