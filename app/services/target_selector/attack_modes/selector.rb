@@ -1,7 +1,7 @@
 module TargetSelector
   module AttackModes
     class Selector
-      MODULE = 'TargetSelector::AttackModes'
+      MODULE = 'TargetSelector::AttackModes'.freeze
 
       def call(attack_mode)
         Object.const_get("#{MODULE}::#{mode_configs[attack_mode]}")
